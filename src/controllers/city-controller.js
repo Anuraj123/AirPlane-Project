@@ -1,4 +1,4 @@
-const { CityService } = require("../services/city-service");
+const { CityService } = require("../services/index");
 
 const cityService = new CityService();
 const create = async (req, res) => {
@@ -83,3 +83,11 @@ const update =async (req, res) => {
         });
       }
 };
+
+
+module.exports={
+    create,
+    get,
+    update,
+    destroy
+}

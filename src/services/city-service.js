@@ -11,6 +11,7 @@ try {
     return city;
 } catch (error) {
     console.log("Something went wrong in the service layer")
+    throw {error}
 }
 
   }
@@ -20,6 +21,7 @@ try {
     return response;
     } catch (error) {
         console.log("Something went wrong in the service layer")
+        throw {error}
     }
   }
   async updateCity(cityId,data) {
@@ -28,6 +30,7 @@ try {
     return city;
     } catch (error) {
         console.log("Something went wrong in the service layer")
+        throw {error}
     }
   }
   async getCity(cityId) {
@@ -36,8 +39,9 @@ try {
     return city;
     } catch (error) {
         console.log("Something went wrong in the service layer")
+        throw {error}
     }
   }
 }
 
-module.exports=CityService
+module.exports=CityService;
